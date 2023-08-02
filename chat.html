@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<title>chat</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container bg-dark mt-5">
+			<div class="row p-5">
+				<div class="col-4">
+					<h1 class="h1 text-white">Person 1</h1>
+					<img src="img/lover1.jfif" width="100%" max-width="100%" height="300px;">
+					<div class="row">
+						<div class="col-8">
+							<input id="lover1" class="mt-3" style="width:100%">
+						</div>
+						<div class="col-4">
+							<button onclick="sendsms()" class="btn-primary btn mt-3" style="width:100%">Send</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 mt-5 bg-white">
+					<div class="box" id="mydiv"></div>
+				</div>
+				<div class="col-4">
+					<h1 class="h1 text-white">Person 2</h1>
+					<img src="img/lover2.jpg" width="100%" max-width="100%" height="300px;">
+					<div class="row">
+						<div class="col-8">
+							<input id="lover2" class="mt-3" style="width:100%">
+						</div>
+						<div class="col-4">
+							<button onclick="sendsms()" class="btn-primary btn mt-3" style="width:100%">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function sendsms() {
+				value1 = document.getElementById("lover1").value;
+				value2 = document.getElementById("lover2").value;
+				element = document.createElement("li");
+				
+				
+				if(value1!= "") {
+					text1 = document.createTextNode(value1);
+					element.appendChild(text1);
+					mydiv = document.getElementById("mydiv");
+					mydiv.appendChild(element);
+					element.style.color="red";
+					document.getElementById("lover1").value = "";
+				}
+				
+				else if(value2!= "") {
+					text2 = document.createTextNode(value2);
+					element.appendChild(text2);
+					mydiv = document.getElementById("mydiv");
+					mydiv.appendChild(element);
+					element.style.color="BLUE";
+					document.getElementById("lover2").value = "";
+					element.style.float="right";
+				}
+				
+			}
+		</script>
+		<style>
+			li{clear:both;list-style:none; font-size:20px;}
+		</style>
+	</body>
+</html>

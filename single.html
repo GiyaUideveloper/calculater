@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Drawing application</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/draw.css">
+	</head>
+	<body>
+		<div class="container">
+			<section class="tools-board">
+				<div class="row">
+					<label class="title">shapes</label>
+					<ul class="options">
+						<li class="option tool" id="reactangle">
+							<span>reactangle</span>
+						</li>
+						<li class="option tool" id="circle">
+							<span>circle</span>
+						</li>
+						<li class="option tool" id="Triangle">
+							<span>Triangle</span>
+						</li>
+						<li class="option">
+							<input type="checkbox" id="fill-color">
+							<label for="fill-color">fill color</label>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="row">
+					<label class="title">Options</label>
+					<ul class="options">
+						<li class="option active tool" id="Brush">
+							<span>Brush</span>
+						</li>
+						<li class="option tool" id="Eraser">
+							<span>Eraser</span>
+						</li>
+						<li class="option">
+							<input type="range" id="size-slider">
+						</li>
+					</ul>
+				</div>
+				
+				<div class="row colors">
+					<label class="title">Colors</label>
+					<ul class="options">
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option">
+							<input type="color" id="color-picker" value="#4a98f7">
+						</li>
+					</ul>
+				</div>
+				
+				<div class="row buttons">
+					<button class="clear-canvas">Clear Canvas</button>
+					<button class="save-img">Save as image</button>
+				</div>
+			</section>
+			<section class="drawing-board">
+				<canvas></canvas>
+			</section>
+		</div>
+		<script type="" src="js/index.js"></script>
+	</body>
+</html>
